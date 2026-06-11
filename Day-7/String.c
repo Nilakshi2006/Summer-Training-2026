@@ -10,4 +10,13 @@ scanf("%s",str); //after space or new stop reading
 gets(str);
 // scanf("%[^\n]",str);
 printf("%s",str);
+
+    printf("Enter text (type 'exit' to stop):\n");
+    while (1) {
+        printf("> ");
+        fgets(str, sizeof(str), stdin);
+        if (strcmp(str, "exit\n") == 0) break;
+        printf("You entered: %s", str);
+    }
+    return 0;
 }
