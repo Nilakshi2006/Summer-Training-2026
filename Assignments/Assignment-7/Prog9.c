@@ -1,16 +1,16 @@
 // C program to find HCF (GCD) of two numbers.
 #include<stdio.h>
-
 int main(){
-    int a, b;
+    int a, b, rem;
     printf("Enter two numbers: ");
-    scanf("%d %d", &a, &b);
+    scanf("%d %d",&a,&b);
 
-    while(a != b){
-        if(a > b) a -= b;
-        else b -= a;
+    int originalA = a, originalB = b;
+    while(rem != 0){
+        rem = a % b;
+        a = b;
+        b = rem;
     }
-
-    printf("HCF (GCD) = %d\n", a);
+    printf("HCF of %d and %d is: %d", originalA, originalB, a);
     return 0;
 }
