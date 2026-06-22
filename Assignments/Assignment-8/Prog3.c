@@ -13,7 +13,9 @@ int main() {
     // Find the number of digits
     numOfDigits = 0;
     while (temp != 0) {
-        numOfDigits++;
+
+
+            numOfDigits++;
         temp /= 10;
     }
 
