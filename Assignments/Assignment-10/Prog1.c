@@ -1,4 +1,4 @@
-// C program to count frequency of each element in an array.#include <stdio.h>
+// C program to count frequency of each element in an array.
 #include<stdio.h>
 int main() {
     int n, arr[100], i, freq[100] = {0};
