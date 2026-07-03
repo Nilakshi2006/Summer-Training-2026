@@ -12,12 +12,14 @@ class org{
         cout << "Contact Number : " << contact << endl;
     }
 };
+//Virtual keyword is used when than one class inherits the same properties
 class faculty:virtual public org{
 
 };
 class student:virtual public org{
 
 };
+// The "diamond problem" occurs when a class inherits from two classes that share a common base class, creating ambiguity.
 class account:public faculty,public student{
     public:
     void getdata(){
