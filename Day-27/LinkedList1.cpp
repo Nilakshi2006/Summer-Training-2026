@@ -1,0 +1,121 @@
+//Linked List
+//It is linear data structure that store data in no contiguos memory location
+
+//Insertion at begining in Linked List
+#include<iostream>
+using namespace std;
+
+//Making of node(datatype) using class
+class node {
+public:
+int data;
+node*next;
+node()  //Constructer to intialize default values
+{
+    data=0;
+    next=NULL;
+}
+node(int val)  
+{
+    data=val;
+    next=NULL;
+}
+};
+
+//class Linked list store each node inside it
+class linkedlist{
+node*start=NULL;                //start pointer that will points to starting node in future
+public:
+void insert(){
+int ch;
+char choice2='y';
+do{
+cout<<"\n1. Insert at Begining."<<endl;
+cout<<"\n2. Insert at End."<<endl ;
+cout<<"\n3. Exit."<<endl;
+cout<<"Enter your choice: ";
+cin>>ch;
+switch(ch){
+    case 1:
+    at_begin();
+    break;
+    case 2: 
+    at_end();
+    break;
+    case 3:
+choice2 ='n';
+break;
+default:
+cout<<"Invalid choice.";
+break;
+}
+}while(choice2=='y');
+}
+void display(){
+node*temp=start;
+cout<<"List:"<<endl;
+while(temp!=NULL){
+    if(start==NULL){
+        cout<<"List is empty!"<<endl;
+        return ;
+    }
+    else{
+        cout<<temp->data<<"->";
+        temp=temp->next;
+    }
+}
+}
+
+//functions for operation
+void at_begin(){
+    int num;
+    cout<<"Enter Number: ";
+    cin>>num;
+    //node making
+node*ptr=new node(num);  //node name is ptr
+if(start==NULL){
+    start=ptr;
+}else{
+    ptr->next=start;     //link the new node to start
+    start=ptr;           //start points to ptr
+cout<<"Node Inserted!"<<endl;
+}
+}
+
+void at_end(){
+
+}
+
+};
+
+int main(){
+    linkedlist l1;
+    int ch;
+    char choice='y';
+    system("cls");  //for clear screen
+    //For menu driven program use do-while or switch
+    do{
+cout<<"\n Linked List Project: "<<endl;
+cout<<"\n1. Insert."<<endl;
+cout<<"\n2.Display."<<endl;
+cout<<"\n3.Exit."<<endl;
+cout<<"Enter your choice: ";
+cin>>ch;
+switch(ch){
+    case 1:
+    l1.insert();
+    break;
+    case 2:
+    l1.display();
+    break;
+    case 3: 
+    choice ='n';    //while condition gets failed here!
+    break;
+    default:
+    cout<<"Invalid Choice!"<<endl;
+    break;
+}
+    }
+    while(choice=='y');
+    return 0;
+}
