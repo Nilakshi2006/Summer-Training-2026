@@ -67,6 +67,8 @@ while(temp!=NULL){
 }
 
 //functions for operation
+
+//Insertion at beginning
 void at_begin(){
     int num;
     cout<<"Enter Number: ";
@@ -82,10 +84,24 @@ cout<<"Node Inserted!"<<endl;
 }
 }
 
+//Insertion at end
 void at_end(){
+int val;
+cout<<"Enter Number: ";
+cin>>val;
+node*ptr=new node(val);
+if(start==NULL){
+    start=ptr;
+}else{
+node*temp=start;
+while(temp->next!=NULL){
+    temp=temp->next;
 
 }
-
+temp->next=ptr;
+cout<<"Node Inserted at end.";
+}
+}
 };
 
 int main(){
