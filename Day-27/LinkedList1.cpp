@@ -15,7 +15,7 @@ node()  //Constructer to intialize default values
     data=0;
     next=NULL;
 }
-node(int val)  
+node(int val) // constructor that automatically gives initial values to a new node when it is created.
 {
     data=val;
     next=NULL;
@@ -66,7 +66,7 @@ while(temp!=NULL){
 }
 }
 
-//functions for operation
+//functions for operation....
 
 //Insertion at beginning
 void at_begin(){
@@ -104,6 +104,7 @@ cout<<"Node Inserted at end.";
 }
 };
 
+//Menu driven program
 int main(){
     linkedlist l1;
     int ch;
