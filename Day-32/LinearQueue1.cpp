@@ -16,6 +16,7 @@ public:
         front = -1;
         rear=-1;
     }
+    
     void enqueue(){
         int val;
         cout<<"Enter the value:";
@@ -31,6 +32,7 @@ public:
     arr[rear]=val;
     cout<<"Value Enqueued"<<endl;
     }
+
     void dequeue(){
 if(front==-1 || front>rear){
     cout<<"Queue Underflow"<<endl;
